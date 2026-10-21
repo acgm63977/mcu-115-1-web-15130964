@@ -60,11 +60,11 @@ header .container .header-inner nav a {
 header .container .header-inner nav a:hover {
   color: var(--primary-color);
 }
-header .container .header-inner nav div.search {
+header .container .header-inner div.search {
   display: flex;
   gap: 0;
 }
-header .container .header-inner input {
+header .container .header-inner div.search input {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   width: 200px;
@@ -72,13 +72,27 @@ header .container .header-inner input {
   border: none;
   background-color: var(--gray-color-100);
 }
-header .container .header-inner button {
+header .container .header-inner div.search button {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 0.5rem;
   border: none;
   background-color: var(--gray-color-100);
   cursor: pointer;
+}
+header .container .header-inner button {
+  background-color: transparent;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+header .material-symbols-outlined {
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 :root {
