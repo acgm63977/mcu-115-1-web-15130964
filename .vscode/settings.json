@@ -1,0 +1,10 @@
+{
+  "liveSassCompile.settings.excludeList": ["/src/assets/code/**"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".min.css",
+      "savePath": "/src"
+    }
+  ]
+}
