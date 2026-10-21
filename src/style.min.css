@@ -18,15 +18,23 @@ header .container {
   margin: 0px auto;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+header .container .header-inner {
+  height: 4rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-header .container .site-title {
+header .container .header-inner .site-title {
   margin: 0px;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
   color: #137fec;
+}
+header .container .header-inner .header-actions {
+  display: flex;
+  gap: 0.5rem;
 }
 
 html,
