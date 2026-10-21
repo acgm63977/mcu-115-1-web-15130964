@@ -8,7 +8,7 @@ section .main {
 }
 
 header {
-  border-bottom: solid 1px #e5e7eb;
+  border-bottom: solid 1px var(--border-color);
 }
 header .container {
   width: 100%;
@@ -43,7 +43,7 @@ header .container .header-inner .site-title {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
-  color: #137fec;
+  color: var(--primary-color);
 }
 header .container .header-inner .header-actions {
   display: flex;
@@ -54,11 +54,11 @@ header .container .header-inner nav {
   gap: 1.5rem;
 }
 header .container .header-inner nav a {
-  color: #4b5563;
+  color: var(--text-color);
   text-decoration: inherit;
 }
 header .container .header-inner nav a:hover {
-  color: #137fec;
+  color: var(--primary-color);
 }
 header .container .header-inner nav div.search {
   display: flex;
@@ -70,15 +70,22 @@ header .container .header-inner input {
   width: 200px;
   padding: 1rem 0.5rem 1rem 1rem;
   border: none;
-  background-color: #f3f4f6;
+  background-color: var(--gray-color-100);
 }
 header .container .header-inner button {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 0.5rem;
   border: none;
-  background-color: #f3f4f6;
+  background-color: var(--gray-color-100);
   cursor: pointer;
+}
+
+:root {
+  --primary-color: #137fec;
+  --text-color: #4b5563;
+  --border-color: #e5e7eb;
+  --gray-color-100: #f3f4f6;
 }
 
 html,
