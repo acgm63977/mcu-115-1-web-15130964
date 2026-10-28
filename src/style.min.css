@@ -3,68 +3,79 @@ section {
   flex-direction: column;
   min-height: 100vh;
 }
-section .main {
+section > .main {
   flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 90vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color);
+}
+a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
 }
 
 header {
   border-bottom: solid 1px var(--border-color);
 }
-header .container {
-  width: 100%;
-  max-width: 90vw;
-  box-sizing: border-box;
-  height: 4rem;
-  margin: 0px auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-header .container .header-inner {
+header .header-inner {
   height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .container .header-inner .header-brand,
-header .container .header-inner .header-actions {
+header .header-inner .search input:focus-visible,
+header .header-inner button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+header .header-inner .header-brand,
+header .header-inner .header-actions {
   display: flex;
   align-items: center;
 }
-header .container .header-inner .header-brand.header-brand,
-header .container .header-inner .header-actions.header-brand {
+header .header-inner .header-brand.header-brand,
+header .header-inner .header-actions.header-brand {
   gap: 2rem;
 }
-header .container .header-inner .header-brand.header-actions,
-header .container .header-inner .header-actions.header-actions {
+header .header-inner .header-brand.header-actions,
+header .header-inner .header-actions.header-actions {
   gap: 0.5rem;
 }
-header .container .header-inner .site-title {
+header .header-inner .site-title {
   margin: 0px;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
   color: var(--primary-color);
 }
-header .container .header-inner .header-actions {
+header .header-inner .header-actions {
   display: flex;
   gap: 0.5rem;
 }
-header .container .header-inner nav {
+header .header-inner nav {
   display: flex;
   gap: 1.5rem;
 }
-header .container .header-inner nav a {
-  color: var(--text-color);
-  text-decoration: inherit;
-}
-header .container .header-inner nav a:hover {
-  color: var(--primary-color);
-}
-header .container .header-inner div.search {
+header .header-inner div.search {
   display: flex;
+  align-items: stretch;
   gap: 0;
 }
-header .container .header-inner div.search input {
+header .header-inner div.search input {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   width: 200px;
@@ -72,7 +83,7 @@ header .container .header-inner div.search input {
   border: none;
   background-color: var(--gray-color-100);
 }
-header .container .header-inner div.search button {
+header .header-inner div.search button {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 0.5rem;
@@ -80,7 +91,7 @@ header .container .header-inner div.search button {
   background-color: var(--gray-color-100);
   cursor: pointer;
 }
-header .container .header-inner button {
+header .header-inner button {
   background-color: transparent;
   padding: 0.5rem;
   border: none;
@@ -95,18 +106,28 @@ header .material-symbols-outlined {
   line-height: 1;
 }
 
+.content-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-block: 2rem;
+}
+
+.category-sidebar {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+.book-main {
+  flex: 1 1 0%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 footer {
   border-top: 1px solid var(--border-color);
 }
-footer .container {
-  width: 100%;
-  max-width: 90vw;
-  box-sizing: border-box;
-  margin: 0px auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-footer .container > div {
+footer .footer-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -114,19 +135,20 @@ footer .container > div {
   gap: 1rem 1.5rem;
   padding-block: 1rem;
 }
-footer .container > div nav {
+footer > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  padding-block: 1rem;
+}
+footer .footer-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
 }
-footer .container > div nav a {
-  color: var(--text-color);
-  text-decoration: inherit;
-}
-footer .container > div nav a:hover {
-  color: var(--primary-color);
-}
-footer .container > div p {
+footer p {
   color: var(--text-color);
   font-size: 0.875rem;
   line-height: 1.25rem;
