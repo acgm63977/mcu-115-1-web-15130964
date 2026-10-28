@@ -7,6 +7,12 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    .search input:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 3px;
+    }
+
     .header-brand,
     .header-actions {
       display: flex;
@@ -41,6 +47,7 @@ header {
 
     div.search {
       display: flex;
+      align-items: stretch;
       gap: 0;
 
       input {
