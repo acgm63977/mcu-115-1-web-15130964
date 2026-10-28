@@ -95,6 +95,43 @@ header .material-symbols-outlined {
   line-height: 1;
 }
 
+footer {
+  border-top: 1px solid var(--border-color);
+}
+footer .container {
+  width: 100%;
+  max-width: 90vw;
+  box-sizing: border-box;
+  margin: 0px auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+footer .container > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  padding-block: 1rem;
+}
+footer .container > div nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+footer .container > div nav a {
+  color: var(--text-color);
+  text-decoration: inherit;
+}
+footer .container > div nav a:hover {
+  color: var(--primary-color);
+}
+footer .container > div p {
+  color: var(--text-color);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 :root {
   --primary-color: #137fec;
   --text-color: #4b5563;
